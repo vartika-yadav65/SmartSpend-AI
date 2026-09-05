@@ -1,0 +1,142 @@
+Date,Category,Amount,Payment_Method,Description
+2026-01-02,Food,250.0,UPI,Lunch
+2026-01-04,Travel,120.0,Cash,Auto fare
+2026-01-06,Shopping,850.0,Card,Clothes
+2026-01-08,Education,500.0,UPI,Books
+2026-01-10,Food,180.0,UPI,Breakfast
+2026-01-12,Entertainment,300.0,Card,Movie
+2026-01-15,Bills,1200.0,UPI,Electricity
+2026-01-18,Travel,200.0,Cash,Bus fare
+2026-01-20,Food,350.0,UPI,Dinner
+2026-01-22,Shopping,650.0,Card,Accessories
+2026-01-25,Education,400.0,UPI,Course
+2026-01-28,Food,220.0,Cash,Lunch
+2026-02-02,Travel,150.0,UPI,Auto fare
+2026-02-05,Food,280.0,UPI,Lunch
+2026-02-08,Shopping,900.0,Card,Shoes
+2026-02-10,Bills,1100.0,UPI,Internet
+2026-02-13,Education,600.0,UPI,Study material
+2026-02-15,Entertainment,450.0,Card,Cinema
+2026-02-18,Food,320.0,UPI,Dinner
+2026-02-20,Travel,250.0,Cash,Taxi
+2026-02-23,Shopping,700.0,Card,Bag
+2026-02-25,Food,200.0,UPI,Breakfast
+2026-02-27,Bills,950.0,UPI,Phone bill
+2026-02-28,Education,350.0,UPI,Notes
+2026-03-01,Education,550.0,UPI,Books
+2026-03-03,Food,300.0,UPI,Lunch
+2026-03-06,Travel,180.0,Cash,Auto fare
+2026-03-09,Shopping,1200.0,Card,Clothes
+2026-03-12,Food,250.0,UPI,Dinner
+2026-03-15,Entertainment,500.0,Card,Movie
+2026-03-18,Bills,1300.0,UPI,Electricity
+2026-03-20,Education,450.0,UPI,Course
+2026-03-23,Food,350.0,Cash,Lunch
+2026-03-26,Travel,220.0,UPI,Taxi
+2026-03-28,Shopping,800.0,Card,Accessories
+2026-03-30,Food,280.0,UPI,Dinner
+2026-04-02,Food,270.0,UPI,Lunch
+2026-04-05,Travel,180.0,Cash,Auto fare
+2026-04-08,Shopping,750.0,Card,Clothes
+2026-04-10,Education,500.0,UPI,Books
+2026-04-12,Bills,1250.0,UPI,Electricity
+2026-04-15,Food,320.0,UPI,Dinner
+2026-04-18,Entertainment,400.0,Card,Movie
+2026-04-20,Travel,250.0,UPI,Taxi
+2026-04-23,Shopping,600.0,Card,Accessories
+2026-04-26,Food,220.0,Cash,Breakfast
+2026-04-28,Education,450.0,UPI,Course
+2026-05-02,Food,300.0,UPI,Lunch
+2026-05-05,Travel,200.0,Cash,Auto fare
+2026-05-08,Shopping,950.0,Card,Shoes
+2026-05-10,Education,550.0,UPI,Books
+2026-05-12,Bills,1150.0,UPI,Internet
+2026-05-15,Food,350.0,UPI,Dinner
+2026-05-18,Entertainment,450.0,Card,Cinema
+2026-05-20,Travel,280.0,UPI,Taxi
+2026-05-23,Shopping,700.0,Card,Bag
+2026-05-26,Food,250.0,Cash,Lunch
+2026-05-29,Education,400.0,UPI,Notes
+2026-06-02,Food,280.0,UPI,Lunch
+2026-06-05,Travel,160.0,Cash,Bus fare
+2026-06-08,Shopping,800.0,Card,Clothes
+2026-06-10,Education,600.0,UPI,Course
+2026-06-12,Bills,1350.0,UPI,Electricity
+2026-06-15,Food,330.0,UPI,Dinner
+2026-06-18,Entertainment,350.0,Card,Movie
+2026-06-20,Travel,220.0,Cash,Auto fare
+2026-06-23,Shopping,650.0,Card,Accessories
+2026-06-26,Food,240.0,UPI,Breakfast
+2026-06-29,Education,450.0,UPI,Books
+2026-07-02,Food,320.0,UPI,Lunch
+2026-07-05,Travel,200.0,Cash,Auto fare
+2026-07-08,Shopping,900.0,Card,Clothes
+2026-07-10,Education,500.0,UPI,Books
+2026-07-12,Bills,1200.0,UPI,Electricity
+2026-07-15,Food,380.0,UPI,Dinner
+2026-07-18,Entertainment,500.0,Card,Cinema
+2026-07-20,Travel,300.0,UPI,Taxi
+2026-07-23,Shopping,750.0,Card,Shoes
+2026-07-26,Food,260.0,Cash,Lunch
+2026-07-29,Education,450.0,UPI,Course
+2026-08-02,Food,300.0,UPI,Lunch
+2026-08-05,Travel,180.0,Cash,Auto fare
+2026-08-08,Shopping,850.0,Card,Clothes
+2026-08-10,Education,650.0,UPI,Study material
+2026-08-12,Bills,1400.0,UPI,Electricity
+2026-08-15,Food,350.0,UPI,Dinner
+2026-08-18,Entertainment,450.0,Card,Movie
+2026-08-20,Travel,250.0,UPI,Taxi
+2026-08-23,Shopping,700.0,Card,Bag
+2026-08-26,Food,280.0,Cash,Breakfast
+2026-08-29,Education,500.0,UPI,Books
+2026-09-02,Food,320.0,UPI,Lunch
+2026-09-05,Travel,200.0,Cash,Auto fare
+2026-09-08,Shopping,950.0,Card,Clothes
+2026-09-10,Education,550.0,UPI,Books
+2026-09-12,Bills,1300.0,UPI,Electricity
+2026-09-15,Food,380.0,UPI,Dinner
+2026-09-18,Entertainment,500.0,Card,Cinema
+2026-09-20,Travel,280.0,UPI,Taxi
+2026-09-23,Shopping,800.0,Card,Accessories
+2026-09-26,Food,250.0,Cash,Lunch
+2026-09-29,Education,450.0,UPI,Course
+2026-10-02,Food,300.0,UPI,Lunch
+2026-10-05,Travel,220.0,Cash,Auto fare
+2026-10-08,Shopping,1000.0,Card,Shoes
+2026-10-10,Education,600.0,UPI,Books
+2026-10-12,Bills,1450.0,UPI,Electricity
+2026-10-15,Food,350.0,UPI,Dinner
+2026-10-18,Entertainment,550.0,Card,Movie
+2026-10-20,Travel,300.0,UPI,Taxi
+2026-10-23,Shopping,750.0,Card,Bag
+2026-10-26,Food,280.0,Cash,Breakfast
+2026-10-29,Education,500.0,UPI,Course
+2026-11-02,Food,350.0,UPI,Lunch
+2026-11-05,Travel,220.0,Cash,Auto fare
+2026-11-08,Shopping,1100.0,Card,Clothes
+2026-11-10,Education,650.0,UPI,Books
+2026-11-12,Bills,1500.0,UPI,Electricity
+2026-11-15,Food,400.0,UPI,Dinner
+2026-11-18,Entertainment,600.0,Card,Cinema
+2026-11-20,Travel,300.0,UPI,Taxi
+2026-11-23,Shopping,850.0,Card,Shoes
+2026-11-26,Food,300.0,Cash,Lunch
+2026-11-29,Education,550.0,UPI,Course
+2026-12-02,Food,350.0,UPI,Lunch
+2026-12-05,Travel,250.0,Cash,Auto fare
+2026-12-08,Shopping,1200.0,Card,Clothes
+2026-12-10,Education,700.0,UPI,Books
+2026-12-12,Bills,1600.0,UPI,Electricity
+2026-12-15,Food,450.0,UPI,Dinner
+2026-12-18,Entertainment,650.0,Card,Cinema
+2026-12-20,Travel,350.0,UPI,Taxi
+2026-12-23,Shopping,900.0,Card,Shoes
+2026-12-26,Food,320.0,Cash,Lunch
+2026-12-29,Education,600.0,UPI,Course
+2026-09-05,Food,100.0,UPI,
+2026-09-05,Food,100.0,UPI,
+2026-05-05,Entertainment,120.0,Card,movie
+2026-05-05,Entertainment,120.0,Card,movie
+2026-05-05,Entertainment,120.0,Card,movie
+2026-05-05,Entertainment,120.0,Card,movie
