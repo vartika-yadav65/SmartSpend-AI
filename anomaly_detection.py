@@ -1,61 +1,53 @@
 import pandas as pd
-from sklearn.ensemble import IsolationForest
+import numpy as np
 
 
 def detect_anomalies(df):
-    """Detect unusual expenses using Isolation Forest."""
 
-    if len(df) < 10:
+    if df is None or df.empty:
         return pd.DataFrame()
 
-    data = df[["Amount"]].copy()
+    data = df.copy()
 
-    model = IsolationForest(
-        contamination=0.10,
-        random_state=42
+    if "Amount" not in data.columns:
+        return pd.DataFrame()
+
+    data["Amount"] = pd.to_numeric(
+        data["Amount"],
+        errors="coerce"
     )
 
-    data["Anomaly"] = model.fit_predict(
-        data[["Amount"]]
+    data = data.dropna(
+        subset=["Amount"]
     )
 
-    anomalies = df[
-        data["Anomaly"] == -1
+    if len(data) < 4:
+        return pd.DataFrame()
+
+    q1 = data["Amount"].quantile(
+        0.25
+    )
+
+    q3 = data["Amount"].quantile(
+        0.75
+    )
+
+    iqr = q3 - q1
+
+    lower_limit = q1 - 1.5 * iqr
+    upper_limit = q3 + 1.5 * iqr
+
+    anomalies = data[
+        (data["Amount"] < lower_limit)
+        |
+        (data["Amount"] > upper_limit)
     ].copy()
-
-    if not anomalies.empty:
-        anomalies["Reason"] = (
-            "Unusually high expense compared with "
-            "other transactions"
-        )
 
     return anomalies
 
 
-if __name__ == "__main__":
-
-    df = pd.read_csv("expenses.csv")
+def anomaly_count(df):
 
     anomalies = detect_anomalies(df)
 
-    print("\n===== ANOMALY DETECTION =====")
-
-    if anomalies.empty:
-
-        print("No unusual expenses detected.")
-
-    else:
-
-        print("Unusual expenses detected:\n")
-
-        print(
-            anomalies[
-                [
-                    "Date",
-                    "Category",
-                    "Amount",
-                    "Description",
-                    "Reason"
-                ]
-            ].to_string(index=False)
-        )
+    return len(anomalies)

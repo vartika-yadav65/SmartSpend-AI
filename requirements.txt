@@ -1,11 +1,4 @@
+streamlit
 pandas
 numpy
-matplotlib
-scikit-learn
-streamlit
-plotly
-__pycache__/
-*.pyc
-.venv/
-.env
-.streamlit/secrets.toml
+openai

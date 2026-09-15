@@ -2,73 +2,127 @@ import pandas as pd
 import numpy as np
 
 
-def load_data(file_path="expenses.csv"):
-    """Load and prepare expense data."""
-    df = pd.read_csv(file_path)
-    
-    df["Date"] = pd.to_datetime(df["Date"])
-    df["Amount"] = pd.to_numeric(df["Amount"], errors="coerce")
+def clean_data(df):
 
-    df = df.dropna(subset=["Date", "Amount"])
-    df = df[df["Amount"] >= 0]
+    data = df.copy()
 
-    return df
+    if "Amount" in data.columns:
 
+        data["Amount"] = pd.to_numeric(
+            data["Amount"],
+            errors="coerce"
+        )
 
-def get_summary(df):
-    """Calculate basic spending statistics."""
-    total_spending = df["Amount"].sum()
-    average_spending = df["Amount"].mean()
-    highest_expense = df["Amount"].max()
+    if "Date" in data.columns:
 
-    highest_category = (
-        df.groupby("Category")["Amount"]
-        .sum()
-        .idxmax()
+        data["Date"] = pd.to_datetime(
+            data["Date"],
+            errors="coerce"
+        )
+
+    data = data.dropna(
+        subset=["Amount"]
     )
 
-    return {
-        "total_spending": total_spending,
-        "average_spending": average_spending,
-        "highest_expense": highest_expense,
-        "highest_category": highest_category
-    }
+    return data
 
 
-def category_analysis(df):
-    """Calculate spending by category."""
-    return (
-        df.groupby("Category")["Amount"]
-        .sum()
-        .sort_values(ascending=False)
+def total_spending(df):
+
+    data = clean_data(df)
+
+    if data.empty:
+        return 0.0
+
+    return round(
+        float(data["Amount"].sum()),
+        2
     )
 
 
-def monthly_analysis(df):
-    """Calculate monthly spending."""
-    df = df.copy()
-    df["Month"] = df["Date"].dt.to_period("M").astype(str)
+def average_expense(df):
 
-    return (
-        df.groupby("Month")["Amount"]
-        .sum()
-        .sort_index()
+    data = clean_data(df)
+
+    if data.empty:
+        return 0.0
+
+    return round(
+        float(data["Amount"].mean()),
+        2
     )
 
 
-if __name__ == "__main__":
-    df = load_data()
+def category_totals(df):
 
-    summary = get_summary(df)
+    data = clean_data(df)
 
-    print("\n===== SMARTSPEND AI =====")
-    print(f"Total Spending: ₹{summary['total_spending']:.2f}")
-    print(f"Average Expense: ₹{summary['average_spending']:.2f}")
-    print(f"Highest Expense: ₹{summary['highest_expense']:.2f}")
-    print(f"Highest Spending Category: {summary['highest_category']}")
+    if data.empty:
+        return {}
 
-    print("\n===== CATEGORY ANALYSIS =====")
-    print(category_analysis(df))
+    if "Category" not in data.columns:
+        return {}
 
-    print("\n===== MONTHLY ANALYSIS =====")
-    print(monthly_analysis(df))
+    result = (
+        data
+        .groupby("Category")["Amount"]
+        .sum()
+        .sort_values(
+            ascending=False
+        )
+    )
+
+    return result.to_dict()
+
+
+def monthly_totals(df):
+
+    data = clean_data(df)
+
+    if data.empty:
+        return {}
+
+    if "Date" not in data.columns:
+        return {}
+
+    data = data.dropna(
+        subset=["Date"]
+    )
+
+    result = (
+        data
+        .groupby(
+            data["Date"].dt.to_period("M")
+        )["Amount"]
+        .sum()
+    )
+
+    result.index = (
+        result.index.astype(str)
+    )
+
+    return result.to_dict()
+
+
+def payment_method_totals(df):
+
+    data = clean_data(df)
+
+    if data.empty:
+        return {}
+
+    if "Payment_Method" not in data.columns:
+        return {}
+
+    result = (
+        data
+        .groupby(
+            "Payment_Method"
+        )["Amount"]
+        .sum()
+        .sort_values(
+            ascending=False
+        )
+    )
+
+    return result.to_dict()
